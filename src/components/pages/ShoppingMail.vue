@@ -87,6 +87,7 @@ import FloorComponent from '../component/FloorComponent'
 //10.引入暴露出来的toMoney函数
 import {toMoney} from '../filter/MoneyFilter.js'
 import GoodsInfo from '../component/GoodsInfoComponent'
+import URL from '@/serviceAPI.config.js'
 export default {
   data() {
     return {
@@ -119,8 +120,8 @@ export default {
   created() {
     // axios获取数据需要一定时间
     axios({
-      url:
-        "https://www.easy-mock.com/mock/5cc6f48758e3d93eff3d80a7/SmileDemo/index",
+      ////13.服务接口API配置文件制作,方便维护
+      url : URL.getShoppingMallInfo,
       method: "get"
     })
       .then(response => {
