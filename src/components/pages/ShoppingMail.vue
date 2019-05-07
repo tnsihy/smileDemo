@@ -120,8 +120,8 @@ export default {
   created() {
     // axios获取数据需要一定时间
     axios({
-      ////13.服务接口API配置文件制作,方便维护
-      url : URL.getShoppingMallInfo,
+      //13.服务接口API配置文件制作,方便维护
+      URL : URL.getShoppingMallInfo,
       method: "get"
     })
       .then(response => {
